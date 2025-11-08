@@ -7,15 +7,16 @@ def move(my_list, direction):
 
     # Move the one to the left or to the right
     if direction == 'right':
-        if new_list[-1] == 1:
-            new_list = new_list
+        # check the position of the 1, not just the last element
+        if index_of_one == len(new_list) - 1:
+            return new_list
         else:
             new_list[index_of_one] = 0
             new_list[index_of_one + 1] = 1
 
     elif direction == 'left':
-        if new_list[0] == 1:
-            new_list = new_list
+        if index_of_one == 0:
+            return new_list
         else:
             new_list[index_of_one] = 0
             new_list[index_of_one - 1] = 1
