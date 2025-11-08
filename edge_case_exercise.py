@@ -4,8 +4,8 @@ def move(my_list, direction):
 
     # Move the one to the left or to the right
     if direction == 'right':
-      if my_list[-1]== 1:
-       pass
+      if index_of_one == len(my_list) - 1:
+       return my_list
       else:
         my_list[index_of_one] = 0
         my_list[index_of_one + 1] = 1
